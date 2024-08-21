@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-form</title>
+    <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+  <section class="formulario">
+    <h1 class="formulario__titulo">Contact Us</h1>
+    <form action="" class="formulario__form">
+      <div>
+        <label for="firstname" class="formulario__label">First Name *</label>
+        <input type="text" name="firstname" id="firstname" class="formulario__input formulario__input--texto">
+        <span class="formulario__validation">This field is required</span>
+      </div>
+      <div>
+        <label for="lastname" class="formulario__label">Last Name *</label>
+        <input type="text" name="lastname" id="lastname" class="formulario__input formulario__input--texto">
+        <span class="formulario__validation">This field is required</span>
+      </div>
+      <div>
+        <label for="emailaddress" class="formulario__label">Email Address *</label>
+        <input type="text" name="emailaddress" id="emailaddress" class="formulario__input formulario__input--texto">
+        <span class="formulario__validation">Please enter a valid email address</span>
+        <span class="formulario__validation">This field is required</span>
+      </div>
+      <div>
+        <label for="querytype" class="formulario__label">Query Type  *</label><br>
+        <div class="formulario__radio exclude">
+          <input type="radio" name="querytype" value="generalenquiry" id="generalenquiry" class="formulario__input formulario__input--radio" checked> <label for="generalenquiry">General Enquiry</label>
+        </div>
+        <div class="formulario__radio"> 
+          <input type="radio" name="querytype" value="supportrequest" id="supportrequest" class="formulario__input formulario__input--radio"> <label for="supportrequest"> Support Request</label>
+        </div>
+        <span class="formulario__validation"> Please select a query type</span>
+      </div>
+      <div>
+        <label for="message" class="formulario__label">Message *</label>
+        <textarea name="message" id="message" class="formulario__input formulario__input--txtarea"></textarea>
+        <span class="formulario__validation">This field is required</span>
+      </div>
+      
+      <div>
+        <div class="formulario__checkbox">
+          <input type="checkbox" name="consent" id="consent">
+          <label class="formulario__messageinput" for="consent">I consent to being contacted by the team *</label>
+        </div>
+        <span class="formulario__validation">To submit this form, please consent to being contacted</span>
+      </div>
+      <div>
+        <button type="submit" class="formulario__submit">submit</button>
+      </div>
+    </form>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Edgar Huaman</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -32,4 +32,139 @@
 
 body{
     font-family: 'Karla';
+    background: var(--Green-200);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 14px 40px;
+}
+
+.formulario{
+    background: var(--White);
+    border-radius: 16px;    
+    width: 332px;
+    padding: 32px 24px;
+}
+
+.formulario__form > div{
+    margin-top: 20px;
+}
+
+.formulario__titulo{
+    font-size: 3rem;
+    user-select: none;
+    
+}
+
+.formulario__label{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--Grey-900);
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+.formulario__input{
+    width: 100%;
+}
+
+.formulario__input--texto{
+    border-radius: 8px;
+    height:40px;
+    outline: none;
+    border: 1px solid var(--Grey-500);
+    padding: 8px;
+    
+}
+
+.formulario__radio{
+    border-radius: 8px;
+    border: 1px solid var(--Grey-500);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 32px; 
+}
+
+.formulario__radio:not(.exclude){
+    margin-top:20px;
+}
+
+.formulario__input--radio{
+    width: 16px;
+    height: 16px;
+}
+
+.formulario__input--radio + label{
+    padding-left: 32px;
+    font-size: 1.6rem;
+    color: var(--Grey-900);
+}
+
+.formulario__validation{
+    display: none;
+    color: var(--Red);
+}
+
+.formulario__messageinput{
+    font-size: 1.6rem;
+    color: var(--Grey-900);
+}
+
+.formulario__checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.formulario__input--txtarea{
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--Grey-500);
+    outline: none;
+    font-family: 'Karla';
+    padding: 8px;
+    resize: none;
+}
+
+.formulario__submit{
+    width: 100%;
+    background-color: var(--Green-600);
+    border: none;
+    color: var(--White);
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-family: 'Karla';
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.attribution{
+    margin-top: 50px;
+}
+
+@media screen and (min-width:480px) {
+    
+}
+
+@media screen and (min-width:768px){
+    .formulario{
+        width: 664px;
+    }
+}
+
+@media screen and (min-width:1025px){
+
+}
+
+@media screen and (min-width:1281px){
+
 }

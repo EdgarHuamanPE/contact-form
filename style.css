@@ -64,8 +64,11 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    display: none;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 2s linear;
 }
+
 
 .formulario__success *{
     color: var(--White);

@@ -110,8 +110,8 @@ frm.addEventListener('submit',(e)=>{
     if(firstname.value.trim()==="" || lastname.value.trim()===""||emailaddress.value.trim()==="" || !emailRegex.test(emailaddress.value) || !validradios || txtarea.value.trim()==="" || !checkbox.checked){
         console.error('validation form');
     }else{
-        success.style.display="flex";
         success.style.opacity="1";
+        success.style.transform="translateY(0px)";
     }
 
 }); 

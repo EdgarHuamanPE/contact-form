@@ -1,4 +1,4 @@
-
+/* set fonts*/
 @font-face {
     font-family: 'Karla';
     src: url('./assets/fonts/static/Karla-Regular.ttf') format('truetype');
@@ -13,6 +13,7 @@
     font-style: normal;
 }
 
+/* globals config */
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +31,7 @@
     font-size: 62.5%;
 }
 
-
+/* body config */
 body{
     font-family: 'Karla';
     background: var(--Green-200);
@@ -41,9 +42,9 @@ body{
     row-gap: 50px;
     min-height: 100vh;
     padding: 120px 14px 40px;
-
 }
 
+/* section main app */
 .formulario{
     background: var(--White);
     border-radius: 16px;    
@@ -52,6 +53,7 @@ body{
     position: relative;
 }
 
+/* section success message */
 .formulario__success{
     position: absolute;
     top:-90px;
@@ -68,7 +70,6 @@ body{
     opacity: 0;
     transition: all 2s linear;
 }
-
 
 .formulario__success *{
     color: var(--White);
@@ -88,48 +89,49 @@ body{
     font-size: 1.2rem;
 }
 
+/* config section form html*/
 .formulario__form{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2%;
 }
 
-.formulario__form > div:nth-child(1){
+.formulario__control--texto:nth-child(1){
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div:nth-child(2){
+.formulario__control--texto:nth-child(2){
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div:nth-child(3){
+.formulario__control--texto:nth-child(3){
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div:nth-child(4){
+.formulario__control--radio{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div:nth-child(5){
+.formulario__control--txtarea{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div:nth-child(6){
+.formulario__control--checkbox{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div:nth-child(7){
+.formulario__control--submit{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-.formulario__form > div{
+.formulario__control{
      margin-top: 20px; 
 }
 
@@ -150,19 +152,6 @@ body{
     width: 100%;
 }
 
-.formulario__input--texto:focus, .formulario__input--txtarea:focus{
-    border: 2px solid var(--Green-600);
-}
-
-.formulario__input--texto:hover, .formulario__input--txtarea:hover{
-    cursor: pointer;
-}
-
-.styleContaintRadio{
-    background-color: var(--Green-200);
-}
-
-
 .formulario__input--texto{
     border-radius: 8px;
     height:40px;
@@ -170,6 +159,14 @@ body{
     border: 1px solid var(--Grey-500);
     padding: 16px;
     
+}
+
+.formulario__input--texto:focus, .formulario__input--txtarea:focus{
+    border: 2px solid var(--Green-600);
+}
+
+.formulario__input--texto:hover, .formulario__input--txtarea:hover{
+    cursor: pointer;
 }
 
 .formulario__radio{
@@ -181,8 +178,6 @@ body{
     align-items: center;
     padding-left: 32px; 
     position: relative;
-    
- 
 }
 
 .formulario__background{
@@ -195,8 +190,9 @@ body{
     z-index: 1;
     user-select: none;
 }
-.formulario__radio:not(.exclude){
-    margin-top:20px;
+
+.formulario__control--radio>div div:nth-child(2){
+     margin-top:20px; 
 }
 
 .formulario__radio:hover{
@@ -209,21 +205,10 @@ body{
     accent-color: var(--Green-600);
 }
 
-.formulario__input--radio + span{
+.label__radio{
     padding-left: 32px;
     font-size: 1.6rem;
     color: var(--Grey-900);
-}
-
-.formulario__validation{
-    display: none;
-    color: var(--Red);
-}
-
-.formulario__messageinput{
-    font-size: 1.6rem;
-    color: var(--Grey-900);
-    cursor: pointer;
 }
 
 .formulario__checkbox{
@@ -249,7 +234,6 @@ body{
     font-family: 'Karla';
     padding: 16px;
     resize: none;
-    
 }
 
 .formulario__submit{
@@ -271,35 +255,46 @@ body{
     background-color: var(--Green-800);
 }
 
+/* Error Messages form control*/
+.formulario__errmessage{
+    display: none;
+    color: var(--Red);
+}
 
+.label__checkbox{
+    font-size: 1.6rem;
+    color: var(--Grey-900);
+    cursor: pointer;
+}
 
 @media screen and (min-width:480px) {
     
 }
 
+/* Media queries to screen more than 768px */
 @media screen and (min-width:768px){
     .formulario{
         width: 664px;
     }
 
-    .formulario__form > div:nth-child(1){
+    .formulario__control--texto:nth-child(1)
+    {
         grid-column-start: 1;
         grid-column-end: 2;
-        
     }
     
-    .formulario__form > div:nth-child(2){
+    .formulario__control--texto:nth-child(2){
         grid-column-start: 2;
         grid-column-end: 3;
     }
 
-    .formulario__form > div:nth-child(4) > div{
+    .formulario__control--radio > div{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .formulario__radio:not(.exclude){
+    .formulario__control--radio>div div:nth-child(2){
         margin-top: 0;
     }
 
